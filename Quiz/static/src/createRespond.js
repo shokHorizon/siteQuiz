@@ -23,7 +23,7 @@ const createRespond = (obj, callback) => {
         botMessage.innerHTML = (`
             <div class="interlocator chat-message interlocator-last-message">
                 <div class="interlocator__wrap-img">
-                    <img alt="interlocator" class="interlocator__img" src="media/robo-avatar.jpg"/>
+                    <img alt="interlocator" class="interlocator__img" src="/../static/media/robo-avatar.jpg"/>
                 </div>
                 <div class="interlocator__message" style="background: rgba(255, 255, 255);">
                     <div class="left-arrow" style="border-color: rgba(0, 0, 0, 0) rgb(255, 255, 255) rgb(255, 255, 255) rgba(0, 0, 0, 0);"></div>
