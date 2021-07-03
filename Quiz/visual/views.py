@@ -12,5 +12,7 @@ def chat(request):
 	return render(request, "chat.html", context)
 
 def vplayer(request):
-	context = {}
+	context = {
+		'file' : request.GET.get('file')
+	}
 	return render(request, "player.html", context)
