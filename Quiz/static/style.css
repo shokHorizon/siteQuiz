@@ -200,7 +200,7 @@ button, input {
     height: 0; 
     overflow:hidden; 
   } 
-  .video-wrap iframe {
+  .video-wrap iframe{
     position: absolute; 
     top: 0; 
     left: 0; 
@@ -516,7 +516,7 @@ div.input-phone .phone-flag {
 
 div.input-phone input[name="whatsapp"] + .checkbox {
     right: 56px;
-    background: url('/media/whatsapp.png') no-repeat 0 0;
+    background: url('/./static/media/whatsapp.png') no-repeat 0 0;
     -webkit-background-size: 100% 200%;
     -moz-background-size: 100% 200%;
     background-size: 100% 200%;
@@ -527,7 +527,7 @@ div.input-phone input[name="whatsapp"] + .checkbox.checked {
 }
 div.input-phone input[name="telegram"] + .checkbox {
     right: 30px;
-    background: url('/media/telegram.png') no-repeat 0 0;
+    background: url('/./static/media/telegram.png') no-repeat 0 0;
     -webkit-background-size: 100% 200%;
     -moz-background-size: 100% 200%;
     background-size: 100% 200%;
@@ -538,7 +538,7 @@ div.input-phone input[name="telegram"] + .checkbox.checked {
 }
 div.input-phone input[name="viber"] + .checkbox {
     right: 4px;
-    background: url('/media/viber.png') no-repeat 0 0;
+    background: url('/./static/media/viber.png') no-repeat 0 0;
     -webkit-background-size: 100% 200%;
     -moz-background-size: 100% 200%;
     background-size: 100% 200%;
@@ -762,6 +762,7 @@ transform: scale(1);
 .field-invalid input[type="text"], .field-invalid input[type="password"], .field-invalid textarea, .field-invalid select, .field-invalid div.input-sex {
     background-color: #fcede8;
 }
+
 @-webkit-keyframes sk-three-bounce {
     0%, 80%, 100% {
     transform: scale(0);
@@ -836,6 +837,3 @@ height: 332px;
     margin-left: 10px;
 }   
 }
-
-
-

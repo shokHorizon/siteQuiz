@@ -2,7 +2,7 @@ const sendForm = () => {
     let form;
 
     const postData = (body) => {
-        return fetch('./server.php', {
+        return fetch('/./contact/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

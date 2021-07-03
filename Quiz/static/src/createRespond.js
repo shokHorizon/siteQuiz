@@ -74,6 +74,6 @@ const createRespond = (obj, callback, link) => {
     createItem();  
 
     if(obj === configChatbot.bot[11]){
-        form = createForm('/./media/flag.gif');
+        form = createForm();
     }
 };

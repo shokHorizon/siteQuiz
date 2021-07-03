@@ -4,7 +4,7 @@ let clientWidth =  document.documentElement.clientWidth;
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    createRespond(configChatbot.bot[0], createButtons,  'media/robo-avatar.jpg');
+    createRespond(configChatbot.bot[0], createButtons,  '/./static/media/robo-avatar.jpg');
 });
 
 document.addEventListener('click', (e) => {
@@ -16,12 +16,11 @@ let target = e.target, id, form, messengers, buttons;
         target.closest('.correspondence__item').innerHTML = ''; 
     } 
     if(id){
-      createRespond(configChatbot.bot[id], createButtons, 'media/robo-avatar.jpg');  
+      createRespond(configChatbot.bot[id], createButtons, '/./static/media/robo-avatar.jpg');  
     }
     
     if(target.closest('.checkbox2')){
         if(target.closest('.checkbox2').classList.contains('checked')){
-            console.log(document.querySelector(`.${target.id}`));
            document.querySelector(`.${target.id}`).value = 1; 
         } else {
             document.querySelector(`.${target.id}`).value = 0;
