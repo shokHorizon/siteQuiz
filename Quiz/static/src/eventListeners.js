@@ -4,7 +4,7 @@ let clientWidth =  document.documentElement.clientWidth;
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    createRespond(configChatbot.bot[0], createButtons);
+    createRespond(configChatbot.bot[0], createButtons,  'media/robo-avatar.jpg');
 });
 
 document.addEventListener('click', (e) => {
@@ -16,7 +16,7 @@ let target = e.target, id, form, messengers, buttons;
         target.closest('.correspondence__item').innerHTML = ''; 
     } 
     if(id){
-      createRespond(configChatbot.bot[id], createButtons);  
+      createRespond(configChatbot.bot[id], createButtons, 'media/robo-avatar.jpg');  
     }
     
     if(target.closest('.checkbox2')){
@@ -26,6 +26,12 @@ let target = e.target, id, form, messengers, buttons;
         } else {
             document.querySelector(`.${target.id}`).value = 0;
         }
+    }
+    if(target.closest('.phone-flag .empty-value')){
+        if(target.value !== document.querySelector('.phone.input').value.substring(0, target.value.length)){
+            document.querySelector('.phone.input').value = target.value;
+        }
+        
     } 
 
 });

@@ -19,7 +19,7 @@ const sendForm = () => {
             phoneBlock = form.querySelector('#formScript-phone'),
             nameBlock = form.querySelector('#formScript-first_name'),
             emailValid = /^[\w-]+@\w+\.\w{2,}$/i,
-            phoneValid = /^[\+\d-]{11,}$/,
+            phoneValid = /^[\+\d- ]{11,}$/,
             nameValid = /^[А-яёA-z\ ]{2,50}$/i;
 
         if(!emailValid.test(email)){

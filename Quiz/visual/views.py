@@ -11,10 +11,6 @@ def chat(request):
 	context = {}
 	return render(request, "chat.html", context)
 
-def sign(request):
-	if request.method == 'POST':
-		form = forms.ContactForm(request.POST)
-		if form.is_valid():
-			form.save()
+def vplayer(request):
 	context = {}
-	return render(request, "chat.html", context)
+	return render(request, "player.html", context)
