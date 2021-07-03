@@ -5,7 +5,7 @@ const sendForm = () => {
         return fetch('/./contact/', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'text/html',
             },
             body: JSON.stringify(body),
         });

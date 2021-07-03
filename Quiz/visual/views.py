@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
+import json
+
 
 
 from . import forms
@@ -22,10 +24,10 @@ def vplayer(request):
 @csrf_exempt
 def contact(request):
 	if request.method == 'POST':
-		form = models.Contact.create()
-  
-		if form.is_valid():
-			form.save()
+		data = json.loads(request.body)
+		data.pop('phone_prefix')
+		form = models.Contact.objects.create(**data)
+		form.save()
 	context = {}
 	return render(request, "chat.html", context)
 
