@@ -759,7 +759,7 @@ transform: scale(1);
     -webkit-animation-delay: -0.10s;
             animation-delay: -0.10s;
 }
-.field-invalid input[type="text"], .field-invalid input[type="password"], .field-invalid textarea, .field-invalid select, .field-invalid div.input-sex {
+p.field-invalid, .field-invalid input[type="text"], .field-invalid input[type="password"], .field-invalid textarea, .field-invalid select, .field-invalid div.input-sex {
     background-color: #fcede8;
 }
 
@@ -780,6 +780,7 @@ transform: scale(1);
     transform: scale(1);
     }
 };
+
 @media screen and (max-width: 920px){
   .start-page-content{
     width: 100%!important;

@@ -5,7 +5,7 @@ const sendForm = () => {
         return fetch('/./contact/', {
             method: 'POST',
             headers: {
-                'Content-Type': 'text/html',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(body),
         });
@@ -18,7 +18,7 @@ const sendForm = () => {
             emailBlock = form.querySelector('#formScript-email'),
             phoneBlock = form.querySelector('#formScript-phone'),
             nameBlock = form.querySelector('#formScript-first_name'),
-            emailValid = /^[\w-]+@\w+\.\w{2,}$/i,
+            emailValid = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i,
             phoneValid = /^[\+\d- ]{11,}$/,
             nameValid = /^[А-яёA-z\ ]{2,50}$/i;
 
@@ -41,8 +41,12 @@ const sendForm = () => {
             phoneBlock.classList.remove('field-invalid');
         }
         if(!agreement.classList.contains('checked')){
+            agreement.closest('p').classList.add('field-invalid');
+            alert('Вы не заполнили одно из обязательных полей. Проверьте всё ещё раз внимательно, обязательные поля выделены цветом');
             return false;
-        } else
+        } else {
+            agreement.closest('p').classList.remove('field-invalid');
+        }
         return true;
     }
 
